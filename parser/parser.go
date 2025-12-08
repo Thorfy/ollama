@@ -114,7 +114,6 @@ func (f Modelfile) CreateRequest(relativeDir string) (*api.CreateRequest, error)
 			if !semver.IsValid(minVersion) {
 				return nil, fmt.Errorf("min_version must be a valid semver (e.g. 0.14.0)")
 			}
-			// Store without "v" prefix
 			req.MinVersion = strings.TrimPrefix(minVersion, "v")
 		case "message":
 			role, msg, _ := strings.Cut(c.Args, ": ")

@@ -606,6 +606,7 @@ type ShowResponse struct {
 	Tensors       []Tensor           `json:"tensors,omitempty"`
 	Capabilities  []model.Capability `json:"capabilities,omitempty"`
 	ModifiedAt    time.Time          `json:"modified_at,omitempty"`
+	MinVersion    string             `json:"min_version,omitempty"`
 }
 
 // CopyRequest is the request passed to [Client.Copy].
