@@ -1097,7 +1097,7 @@ func GetModelInfo(req api.ShowRequest) (*api.ShowResponse, error) {
 		Messages:     msgs,
 		Capabilities: m.Capabilities(),
 		ModifiedAt:   manifest.fi.ModTime(),
-		MinVersion:   m.Config.MinVersion,
+		Requires:     m.Config.Requires,
 	}
 
 	if m.Config.RemoteHost != "" {
